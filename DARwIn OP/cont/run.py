@@ -3,7 +3,7 @@ import fileinput
 import shutil
 import pathlib
 
-dir=r"C:\Users\ANGEL\Documents\Verano 2021\Soccer\controllers\rotar3"
+dir=input("Ingresa la direccion del controlador creado: ")
 base=str(pathlib.Path(__file__).parent.resolve())+r"\controladorBASE"
 nombre=dir.split("\\")[-1]
 for file in os.listdir(base):
