@@ -81,7 +81,7 @@ NuevoControlador::NuevoControlador() : Robot() {
 
   mMotionManager = new RobotisOp2MotionManager(this);
   mGaitManager = new RobotisOp2GaitManager(this, "config.ini");
-  mVisionManager = new RobotisOp2VisionManager(mCamera->getWidth(), mCamera->getHeight(), 355, 20, 50, 45, 0, 30);
+  mVisionManager = new RobotisOp2VisionManager(mCamera->getWidth(), mCamera->getHeight(), 28, 20, 50, 45, 0, 30);
 }
 
 NuevoControlador::~NuevoControlador() {
