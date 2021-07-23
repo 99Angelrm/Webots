@@ -1,4 +1,4 @@
-#Controlador plantilla
+# Controlador plantilla
 
 En esta carpeta se encuentran los archivos necesarios para ayudar a crear contorladores más facilmente para el usuario. Es necesario crear el controlador desde el wizard de webots.
 
