@@ -4,7 +4,7 @@ import shutil
 import pathlib
 
 dir=input("Ingresa la direccion del controlador creado: ")
-base=str(pathlib.Path(__file__).parent.resolve())+r"\controladorBASE"
+base=str(pathlib.Path(__file__).parent.resolve())+r"\plantilla"
 nombre=dir.split("\\")[-1]
 for file in os.listdir(base):
     if file.split(".")[0]==r"{nombre}":
