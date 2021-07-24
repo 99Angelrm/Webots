@@ -3,7 +3,7 @@ En esta carpeta se encuentran los archivos que se van generando conforme el desa
 <br>
 En la carpeta **cont** se encuentran archivos necesarios para facilitar el desarrollo de nuevos controladores, como:
 - archivo run.py
-- La carpeta controladorBASE
+- La carpeta plantilla
 <br>
 En la carpeta NuevoMundo se encuentran los archivos necesarios para mostrar:
 
