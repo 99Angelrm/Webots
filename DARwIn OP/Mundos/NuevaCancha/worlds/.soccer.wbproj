@@ -5,6 +5,6 @@ sceneTreePerspectives: 000000ff0000000100000002000000c00000011201000000020100000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "controllers/NuevoControlador/NuevoControlador.cpp"
+textFiles: 0 "controllers/JugadorDefault/JugadorDefault.cpp"
 consoles: Console:All:All
-renderingDevicePerspectives: ROBOTIS OP2:Camera;1;1;0;0
+renderingDevicePerspectives: ROBOTIS OP2:Camera;1;0.802083;0;0

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "NuevoControlador.hpp"
+#include "Soccer.hpp"
 #include <RobotisOp2GaitManager.hpp>
 #include <RobotisOp2MotionManager.hpp>
 #include <RobotisOp2VisionManager.hpp>
@@ -52,7 +52,7 @@ static const char *motorNames[NMOTORS] = {
   "AnkleL" /*ID16*/,    "FootR" /*ID17*/,     "FootL" /*ID18*/,     "Neck" /*ID19*/,      "Head" /*ID20*/
 };
 
-NuevoControlador::NuevoControlador() : Robot() {
+Soccer::Soccer() : Robot() {
   mTimeStep = getBasicTimeStep();
 
   mEyeLED = getLED("EyeLed");
@@ -84,16 +84,16 @@ NuevoControlador::NuevoControlador() : Robot() {
   mVisionManager = new RobotisOp2VisionManager(mCamera->getWidth(), mCamera->getHeight(), 28, 20, 50, 45, 0, 30);
 }
 
-NuevoControlador::~NuevoControlador() {
+Soccer::~Soccer() {
 }
 
-void NuevoControlador::myStep() {
+void Soccer::myStep() {
   int ret = step(mTimeStep);
   if (ret == -1)
     exit(EXIT_SUCCESS);
 }
 
-void NuevoControlador::wait(int ms) {
+void Soccer::wait(int ms) {
   double startTime = getTime();
   double s = (double)ms / 1000.0;
   while (s + startTime >= getTime())
@@ -104,7 +104,7 @@ void NuevoControlador::wait(int ms) {
 // - return: indicates if the algorithm found the ball
 // - args: return the position of the ball [-1.0, 1.0]
 
-bool NuevoControlador::getBallCenter(double &x, double &y) {
+bool Soccer::getBallCenter(double &x, double &y) {
   static int width = mCamera->getWidth();
   static int height = mCamera->getHeight();
 
@@ -123,8 +123,15 @@ bool NuevoControlador::getBallCenter(double &x, double &y) {
 }
 
 // function containing the main feedback loop
-void NuevoControlador::run() {
+void Soccer::run() {
+  cout << "---------------Demo of ROBOTIS OP2---------------" << endl;
+  cout << "This demo illustrates all the possibilities available for the ROBOTIS OP2." << endl;
+  cout << "This includes motion playback, walking algorithm and image processing." << endl;
 
+  // Use the speaker to present
+  mSpeaker->speak("Hi, my name is ROBOTIS OP2. I can walk, use my camera to find the ball, and perform complex motion like "
+                  "kicking the ball for example.",
+                  1.0);
 
   // First step to update sensors values
   myStep();
@@ -134,7 +141,7 @@ void NuevoControlador::run() {
 
   // play the hello motion
   mMotionManager->playPage(1);   // init position
-  //mMotionManager->playPage(24);  // hello
+  mMotionManager->playPage(24);  // hello
   mMotionManager->playPage(9);   // walkready position
   wait(200);
 

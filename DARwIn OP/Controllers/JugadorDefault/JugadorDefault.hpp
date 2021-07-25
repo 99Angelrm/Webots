@@ -1,6 +1,6 @@
 
-#ifndef NUEVOCONTROLADOR_HPP
-#define NUEVOCONTROLADOR_HPP
+#ifndef JUGADORDEFAULT_HPP
+#define JUGADORDEFAULT_HPP
 
 #define NMOTORS 20
 
@@ -22,10 +22,10 @@ namespace webots {
   class Speaker;
 };  // namespace webots
 
-class NuevoControlador : public webots::Robot {
+class JugadorDefault : public webots::Robot {
 public:
-  NuevoControlador();
-  virtual ~NuevoControlador();
+  JugadorDefault();
+  virtual ~JugadorDefault();
   void run();
 
 private:

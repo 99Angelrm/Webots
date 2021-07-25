@@ -14,14 +14,14 @@
 
 // Description:   Manage the entree point function
 
-#include "NuevoControlador.hpp"
+#include "JugadorDefault.hpp"
 
 #include <cstdlib>
 
 using namespace webots;
 
 int main(int argc, char **argv) {
-  NuevoControlador *controller = new NuevoControlador();
+  JugadorDefault *controller = new JugadorDefault();
   controller->run();
   delete controller;
   return EXIT_FAILURE;
