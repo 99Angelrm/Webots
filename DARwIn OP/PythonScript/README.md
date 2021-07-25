@@ -26,7 +26,7 @@ python run.py
 
 Luego ingresar la carpeta donde se encuentra el controlador.
 
-```cmd
+```bash
 Ingresa la direccion del controlador creado: 
 ```
 ## Screenshots
