@@ -1,7 +1,7 @@
 # DARwIn OP 2 con Webots
 En esta carpeta se encuentran los archivos que se van generando conforme el desarrollo de código.
 <br>
-En la carpeta **cont** se encuentran archivos necesarios para facilitar el desarrollo de nuevos controladores, como:
+En la carpeta **PythonScript** se encuentran archivos necesarios para facilitar el desarrollo de nuevos controladores, como:
 - archivo run.py
 - La carpeta plantilla
 <br>
