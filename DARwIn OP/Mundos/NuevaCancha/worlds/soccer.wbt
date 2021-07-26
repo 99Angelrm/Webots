@@ -30,9 +30,9 @@ DEF BALL Ball {
 DEF ROBOTISOP2 RobotisOp2 {
   translation -0.567676 0.23466 -0.302673
   rotation -0.14213197373385378 -0.9878638174416721 0.06263848842433795 -1.05598
-  controller "JugadorDefault"
+  controller "soccer"
   cameraWidth 320
-  cameraHeight 480
+  cameraHeight 240
   jersey RobotisJersey {
   }
 }
