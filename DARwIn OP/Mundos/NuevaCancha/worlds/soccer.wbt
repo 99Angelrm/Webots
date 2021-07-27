@@ -10,7 +10,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0.16146271043350127 -0.9733404805196807 -0.16290519365933198 4.672381269568933
-  position 1.056356093433948 0.6120158896416364 -0.07666785519912436
+  position 1.2816027817208098 0.6897597221104158 -0.0796222297015323
   follow "ROBOTIS OP2"
 }
 TexturedBackground {
@@ -26,11 +26,12 @@ RobotstadiumSoccerField {
   frame2Color 0.2 0.4 0.8
 }
 DEF BALL Ball {
+  color 1 0 0
 }
 DEF ROBOTISOP2 RobotisOp2 {
   translation -0.567676 0.23466 -0.302673
   rotation -0.14213197373385378 -0.9878638174416721 0.06263848842433795 -1.05598
-  controller "soccer"
+  controller "JugadorDefault"
   cameraWidth 320
   cameraHeight 240
   jersey RobotisJersey {
