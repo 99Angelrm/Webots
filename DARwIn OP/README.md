@@ -5,12 +5,17 @@ En la carpeta **PythonScript** se encuentran archivos necesarios para facilitar 
 - archivo run.py
 - La carpeta plantilla
 <br>
-En la carpeta NuevoMundo se encuentran los archivos necesarios para mostrar:
+En la carpeta Mundos/NuevaCancha se encuentran los archivos necesarios para mostrar:
 
 - Cancha
 - DARwIn OP 2
 - Una pelota Naranja
+<br>
+En la carpeta Controllers se encuentran los controladores descargables pasa su fácil implementación en Webots.
 
+- soccer
+- JugadorDefault
+- Porteria
 
 ## Despliegue
 
@@ -23,7 +28,7 @@ Para saber si python está instalado en su sistema puede abrir una consola nueva
 
 ## Ejemplo de uso
 
-Abir una consola dentro de la carpeta cont y correr el siguiente comando
+Abir una consola dentro de la carpeta PythonScript y correr el siguiente comando
 
 ```cmd
 python run.py
