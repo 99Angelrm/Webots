@@ -14,5 +14,5 @@ En la carpeta Mundos/NuevaCancha se encuentran los archivos necesarios para most
 En la carpeta Controllers se encuentran los controladores descargables pasa su fácil implementación en Webots.
 
 - soccer
-- JugadorDefault
-- Porteria
+- PateaPelota
+- MeteGol
