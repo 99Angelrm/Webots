@@ -1,6 +1,6 @@
 
-#ifndef JUGADORDEFAULT_HPP
-#define JUGADORDEFAULT_HPP
+#ifndef PATEAPELOTA_HPP
+#define PATEAPELOTA_HPP
 
 #define NMOTORS 20
 
@@ -22,10 +22,10 @@ namespace webots {
   class Speaker;
 };  // namespace webots
 
-class JugadorDefault : public webots::Robot {
+class PateaPelota : public webots::Robot {
 public:
-  JugadorDefault();
-  virtual ~JugadorDefault();
+  PateaPelota();
+  virtual ~PateaPelota();
   void run();
 
 private:

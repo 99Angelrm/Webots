@@ -2,7 +2,7 @@
 // Description: State machine of default behavior player.
 
 
-#include "JugadorDefault.hpp"
+#include "PateaPelota.hpp"
 #include <RobotisOp2GaitManager.hpp>
 #include <RobotisOp2MotionManager.hpp>
 #include <RobotisOp2VisionManager.hpp>
@@ -42,7 +42,7 @@ static const char *motorNames[NMOTORS] = {
   "AnkleL" /*ID16*/,    "FootR" /*ID17*/,     "FootL" /*ID18*/,     "Neck" /*ID19*/,      "Head" /*ID20*/
 };
 
-JugadorDefault::JugadorDefault() : Robot() {
+PateaPelota::PateaPelota() : Robot() {
   mTimeStep = getBasicTimeStep();
 
   mEyeLED = getLED("EyeLed");
@@ -71,19 +71,19 @@ JugadorDefault::JugadorDefault() : Robot() {
 
   mMotionManager = new RobotisOp2MotionManager(this);
   mGaitManager = new RobotisOp2GaitManager(this, "config.ini");
-  mVisionManager = new RobotisOp2VisionManager(mCamera->getWidth(), mCamera->getHeight(), 28, 20, 50, 45, 0, 30);
+  mVisionManager = new RobotisOp2VisionManager(mCamera->getWidth(), mCamera->getHeight(), 355, 20, 50, 45, 0, 30);
 }
 
-JugadorDefault::~JugadorDefault() {
+PateaPelota::~PateaPelota() {
 }
 
-void JugadorDefault::myStep() {
+void PateaPelota::myStep() {
   int ret = step(mTimeStep);
   if (ret == -1)
     exit(EXIT_SUCCESS);
 }
 
-void JugadorDefault::wait(int ms) {
+void PateaPelota::wait(int ms) {
   double startTime = getTime();
   double s = (double)ms / 1000.0;
   while (s + startTime >= getTime())
@@ -94,7 +94,7 @@ void JugadorDefault::wait(int ms) {
 // - return: indicates if the algorithm found the ball
 // - args: return the position of the ball [-1.0, 1.0]
 
-bool JugadorDefault::getBallCenter(double &x, double &y) {
+bool PateaPelota::getBallCenter(double &x, double &y) {
   static int width = mCamera->getWidth();
   static int height = mCamera->getHeight();
 
@@ -113,7 +113,7 @@ bool JugadorDefault::getBallCenter(double &x, double &y) {
 }
 
 // function containing the main feedback loop
-void JugadorDefault::run() {
+void PateaPelota::run() {
 
 
   // First step to update sensors values

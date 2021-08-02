@@ -14,14 +14,14 @@
 
 // Description:   Manage the entree point function
 
-#include "JugadorDefault.hpp"
+#include "PateaPelota.hpp"
 
 #include <cstdlib>
 
 using namespace webots;
 
 int main(int argc, char **argv) {
-  JugadorDefault *controller = new JugadorDefault();
+  PateaPelota *controller = new PateaPelota();
   controller->run();
   delete controller;
   return EXIT_FAILURE;
