@@ -1,4 +1,4 @@
-build/release/Porteria.o: Porteria.cpp Porteria.hpp \
+build/release/PateaPelota.o: PateaPelota.cpp PateaPelota.hpp \
  C:\Users\ANGEL\AppData\Local\Programs\Webots/include/controller/cpp/webots/Robot.hpp \
  C:\Users\ANGEL\AppData\Local\Programs\Webots/projects/robots/robotis/darwin-op/libraries/managers/include/RobotisOp2GaitManager.hpp \
  C:\Users\ANGEL\AppData\Local\Programs\Webots/projects/robots/robotis/darwin-op/libraries/managers/include/RobotisOp2MotionManager.hpp \

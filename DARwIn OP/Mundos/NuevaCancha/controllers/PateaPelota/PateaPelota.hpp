@@ -1,6 +1,6 @@
 
-#ifndef PORTERIA_HPP
-#define PORTERIA_HPP
+#ifndef PATEAPELOTA_HPP
+#define PATEAPELOTA_HPP
 
 #define NMOTORS 20
 
@@ -22,10 +22,10 @@ namespace webots {
   class Speaker;
 };  // namespace webots
 
-class Porteria : public webots::Robot {
+class PateaPelota : public webots::Robot {
 public:
-  Porteria();
-  virtual ~Porteria();
+  PateaPelota();
+  virtual ~PateaPelota();
   void run();
 
 private:

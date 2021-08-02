@@ -1,18 +1,8 @@
-// Copyright 1996-2020 Cyberbotics Ltd.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+// Coded by Angel Ramirez.
+// Description: State machine of default behavior player.
 
-#include "Porteria.hpp"
+
+#include "PateaPelota.hpp"
 #include <RobotisOp2GaitManager.hpp>
 #include <RobotisOp2MotionManager.hpp>
 #include <RobotisOp2VisionManager.hpp>
@@ -52,7 +42,7 @@ static const char *motorNames[NMOTORS] = {
   "AnkleL" /*ID16*/,    "FootR" /*ID17*/,     "FootL" /*ID18*/,     "Neck" /*ID19*/,      "Head" /*ID20*/
 };
 
-Porteria::Porteria() : Robot() {
+PateaPelota::PateaPelota() : Robot() {
   mTimeStep = getBasicTimeStep();
 
   mEyeLED = getLED("EyeLed");
@@ -84,16 +74,16 @@ Porteria::Porteria() : Robot() {
   mVisionManager = new RobotisOp2VisionManager(mCamera->getWidth(), mCamera->getHeight(), 355, 20, 50, 45, 0, 30);
 }
 
-Porteria::~Porteria() {
+PateaPelota::~PateaPelota() {
 }
 
-void Porteria::myStep() {
+void PateaPelota::myStep() {
   int ret = step(mTimeStep);
   if (ret == -1)
     exit(EXIT_SUCCESS);
 }
 
-void Porteria::wait(int ms) {
+void PateaPelota::wait(int ms) {
   double startTime = getTime();
   double s = (double)ms / 1000.0;
   while (s + startTime >= getTime())
@@ -104,7 +94,7 @@ void Porteria::wait(int ms) {
 // - return: indicates if the algorithm found the ball
 // - args: return the position of the ball [-1.0, 1.0]
 
-bool Porteria::getBallCenter(double &x, double &y) {
+bool PateaPelota::getBallCenter(double &x, double &y) {
   static int width = mCamera->getWidth();
   static int height = mCamera->getHeight();
 
@@ -123,8 +113,8 @@ bool Porteria::getBallCenter(double &x, double &y) {
 }
 
 // function containing the main feedback loop
-void Porteria::run() {
-  
+void PateaPelota::run() {
+
 
   // First step to update sensors values
   myStep();
