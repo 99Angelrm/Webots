@@ -1,4 +1,4 @@
-# Controlador JugadorDefault
+# Controlador PateaPelota
 
 Este es el Controlador de prueba basado en el controlador soccer brindado por webots pero implementado con una máquina de estados.
 
@@ -6,7 +6,7 @@ Este es el Controlador de prueba basado en el controlador soccer brindado por we
 
 ## Maquina de estados
 
-![JugadorDefault](https://raw.githubusercontent.com/99Angelrm/resources/main/JugadorDefault.png)
+![JugadorDefault](https://raw.githubusercontent.com/99Angelrm/resources/main/JugadorDefaultV2.png)
 
   
 ## Utilización
